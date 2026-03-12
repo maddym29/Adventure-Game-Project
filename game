@@ -1,1 +1,3 @@
-imput gamefunctions
+import gamefunctions
+name = input("What is your name?")
+print_welcome(f"{name}, count.name")
