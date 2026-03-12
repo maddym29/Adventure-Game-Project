@@ -65,26 +65,31 @@ This function produces a monster.
         "money": money
     }     
     return monster
-def welcome(name, width):
+def print_welcome(name, width):
 """ 
-This function works to welcome a player.
+This function welcomes a player with a centered greeting.
     Parameters:
         name (str): names the player
         width (int): width of name
     Returns: none
 """
-    greet = print(f"Hello,{name:+^width}!")
-    return greet
-def shop_menu(item1Name, item1Price, item2Name, item2Price):
-""" This function creates a boardered menu.
+    greet = f"Hello, {name}!"
+    print(f"{greet:^{width}}")
+def print_shop_menu(item1Name, item1Price, item2Name, item2Price):
+""" This function creates a bordered menu.
     Parameters:
-        item1Name (str): inputs first name
-        item1Price (int): inputs first price (rounds to two decimal places)
-        item2Name (str): inputs second name
-        item2Price (int): inputs second price (rounds to two decimal places)
+        item1Name (str): imputs first name
+        item1Price (int): imputs first price (rounds to two decimal places)
+        item2Name (str): imputs second name
+        item2Price (int): imputs second price (rounds to two decimal places)
 """
-    line1 = print(//******************\\)
-    line2 = print(f"| {item1Name:<12}{item1Price:.2f>8}")
-    line3 = print(f"| {item2Name:<12}{item2Price:.2f>8}")
-    menu = line1 + line2 + line3 + line1
-    return menu
+    print("//--------------------\\")
+    print(f"| {item1Name:<12}${item1Price:>7.2f} |")
+    print(f"| {item2Name:<12}${item2Price:>7.2f} |")
+    print("\\--------------------//")
+print_welcome("Audrey", 6)
+print_welcome("Maddy", 5)
+print_welcome("Liv", 3)
+print_shop_menu("Orange", 2.50, "Mango", 3.00)
+print_shop_menu("Cereal", 1.253, "Milk", 4.05)
+print_shop_menu("Carrots", 5.55, "Asparagus", 2.45)
