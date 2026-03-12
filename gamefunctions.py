@@ -87,9 +87,18 @@ def print_shop_menu(item1Name, item1Price, item2Name, item2Price):
     print(f"| {item1Name:<12}${item1Price:>7.2f} |")
     print(f"| {item2Name:<12}${item2Price:>7.2f} |")
     print("\\--------------------//")
-print_welcome("Audrey", 6)
-print_welcome("Maddy", 5)
-print_welcome("Liv", 3)
-print_shop_menu("Orange", 2.50, "Mango", 3.00)
-print_shop_menu("Cereal", 1.253, "Milk", 4.05)
-print_shop_menu("Carrots", 5.55, "Asparagus", 2.45)
+def test_functions():
+    """
+    This function tests your other functions.
+    Paramters: None
+    """
+    print_welcome("Audrey", 6)
+    print_welcome("Maddy", 5)
+    print_welcome("Liv", 3)
+    
+    print_shop_menu("Orange", 2.50, "Mango", 3.00)
+    print_shop_menu("Cereal", 1.253, "Milk", 4.05)
+    print_shop_menu("Carrots", 5.55, "Asparagus", 2.45)
+if __name__ == "__main__":
+    test_functions()
+
