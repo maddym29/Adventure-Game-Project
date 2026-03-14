@@ -3,17 +3,15 @@
 Use this module to create a game, giving your monster the ability
 to purchase items, create a menu, and welcome other players.
 """
-
-input random
 def purchase_item(itemPrice, startingMoney, quantityToPurchase=1):
-"""
-This function calculates how many items can be purchased with a starting amount.
-Parameters: 
-    itemPrice: how much does each item cost?
-    startingMoney: how much money does your monster have?
-    quantityToPurchase: is at least one.
-Returns: none
-"""
+    """
+    This function calculates how many items can be purchased with a starting amount.
+        Parameters: 
+            itemPrice: how much does each item cost?
+            startingMoney: how much money does your monster have?
+            quantityToPurchase: is at least one.
+        Returns: none
+    """
     max_affordable = startingMoney // itemPrice
     if max_affordable < quantityToPurchase:
         items_bought = max_affordable
@@ -27,12 +25,13 @@ num_purchased, leftover_money = purchase_item(241, 203, 5)
 print(purchase_item(123, 1000, 3))
 print(purchase_item(3141, 2112))
 print(purchase_item(241, 203, 5))
+import random
 def new_random_monster():
-"""
-This function produces a monster.
-    Paramaters: none
-    Returns: none
-"""
+    """
+    This function produces a monster.
+        Paramaters: none
+        Returns: none
+    """
     monsters = ["Giraffe Bear", "Smoothie Butterfly", "Kitten Dragon"]
     healthy = [3, 4, 6]
     worth = [500, 200, 400]
@@ -66,23 +65,24 @@ This function produces a monster.
     }     
     return monster
 def print_welcome(name, width):
-""" 
-This function welcomes a player with a centered greeting.
-    Parameters:
-        name (str): names the player
-        width (int): width of name
-    Returns: none
-"""
+    """ 
+    This function welcomes a player with a centered greeting.
+        Parameters:
+            name (str): names the player
+            width (int): width of name
+        Returns: none
+    """
     greet = f"Hello, {name}!"
     print(f"{greet:^{width}}")
 def print_shop_menu(item1Name, item1Price, item2Name, item2Price):
-""" This function creates a bordered menu.
-    Parameters:
-        item1Name (str): imputs first name
-        item1Price (int): imputs first price (rounds to two decimal places)
-        item2Name (str): imputs second name
-        item2Price (int): imputs second price (rounds to two decimal places)
-"""
+    """
+    This function creates a bordered menu.
+        Parameters:
+            item1Name (str): imputs first name
+            item1Price (int): imputs first price (rounds to two decimal places)
+            item2Name (str): imputs second name
+            item2Price (int): imputs second price (rounds to two decimal places)
+    """
     print("//--------------------\\")
     print(f"| {item1Name:<12}${item1Price:>7.2f} |")
     print(f"| {item2Name:<12}${item2Price:>7.2f} |")
@@ -99,6 +99,8 @@ def test_functions():
     print_shop_menu("Orange", 2.50, "Mango", 3.00)
     print_shop_menu("Cereal", 1.253, "Milk", 4.05)
     print_shop_menu("Carrots", 5.55, "Asparagus", 2.45)
+
+    print(new_random_monster())
+    print(purchase_item(6, 35, 8))
 if __name__ == "__main__":
     test_functions()
-
