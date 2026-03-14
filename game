@@ -1,3 +1,6 @@
 import gamefunctions
 name = input("What is your name?")
-print_welcome(f"{name}, count.name")
+print_welcome(name, count.name)
+print(purchase_itme(5, 50, 6)
+print(new_random_monster())
+print(print_shop_menu(Potion, 4.75, Unicorn, 500.09)
