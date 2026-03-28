@@ -5,3 +5,17 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:maddym29/Adventure-Game-Project.git
 git push -u origin main
+
+
+def test_functions():
+    """
+    This function tests your other functions.
+    Paramters: None
+    """
+    print_welcome("Audrey", 6)
+    print_welcome("Maddy", 5)
+    print_welcome("Liv", 3)
+    
+    print_shop_menu("Orange", 2.50, "Mango", 3.00)
+    print_shop_menu("Cereal", 1.253, "Milk", 4.05)
+    print_shop_menu("Carrots", 5.55, "Asparagus", 2.45)
