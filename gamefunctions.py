@@ -19,12 +19,7 @@ def purchase_item(itemPrice, startingMoney, quantityToPurchase=1):
         items_bought = quantityToPurchase
     money_left = startingMoney - (items_bought * itemPrice)
     return items_bought, money_left
-num_purchased, leftover_money = purchase_item(123, 1000, 3)
-num_purchased, leftover_money = purchase_item(3141, 2112)
-num_purchased, leftover_money = purchase_item(241, 203, 5)
-print(purchase_item(123, 1000, 3))
-print(purchase_item(3141, 2112))
-print(purchase_item(241, 203, 5))
+
 import random
 def new_random_monster():
     """
